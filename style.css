@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 100vh;
+    box-sizing: border-box;
+    background-color:black;
+    color: whitesmoke;
+} 
+
+strong{
+    color: bisque;
+}  
+
+.container{
+    margin: 0% 10% 0% 10%;
+    display: flex;
+    /* Por padrao fica as div em coluna (row)*/
+    align-items: center; 
+    /* alinhamento vertical */
+    justify-content: space-between;
+      /* ele coloca espaçamento entre os item alinhamento horizontal*/
+}
+.container__conteudo{
+    width: 500px;
+}
+.container__conteudo__h1{
+    font-size: 34px;
+}
+.container__conteudo__p{
+    font-size: 24px;
+}
+/*
+
+
+
+
+cascata porque ele vai fechado o estilo
+precisa de link entre o css e o html
+
+select de atributo 
+a[title]
+a[href="exempo"]
+
+Padrao ---- todo projeto
+* : Representa todo as tag da pagina essa configuração representa.
+
+Quando o body tem o height com  100vh quer dizer que ele vai ocupar 100% da -tela- 
+de todo o dispositivo ele vai ocupar toda a tela. 
+
+Padrao ---- todo projeto
+box-sizing : border-box
+box-sizing : content-box
+     Colocar sempre na caixa pai pra não deixar a caixa filho sair.
+
+viewport : usar por questao de resposividade
+
+flex-box: display: flex;
+
+
+*/
