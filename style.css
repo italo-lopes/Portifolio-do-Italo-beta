@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Open+Sans:ital@1&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
@@ -15,27 +17,98 @@ strong{
 }  
 
 .container{
-    margin: 0% 10% 0% 10%;
+  
+    margin: 10% 15% 0% 15%;
     display: flex;
     /* Por padrao fica as div em coluna (row)*/
     align-items: center; 
     /* alinhamento vertical */
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 5px;
       /* ele coloca espaçamento entre os item alinhamento horizontal*/
 }
+
 .container__conteudo{
-    width: 500px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 .container__conteudo__h1{
     font-size: 34px;
+    font-family: 'Open Sans', sans-serif;
 }
 .container__conteudo__p{
     font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container__conteudo__links{
+    margin: 0% 0% 0% 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+.container__link__ancora{
+    background-color: whitesmoke ;
+    width: 260px;
+    text-align: center; 
+    border-radius: 16px;
+    font-size: 20px;
+    padding: 21.5px 0px 21.5px 0px; 
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600px;
 }
 /*
 
 
 
+width: 280px  tamanho da tag:
+text-align: center-> alinha o texto na teg
+
+===============================================================
+config do botao :
+    background-color: whitesmoke ;
+    width: 260px;
+    text-align: center; 
+    border-radius: 16px;
+    font-size: 20px;
+    padding: 21.5px 0px 21.5px 0px; 
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+===============================================================
+--------------------------------
+Extra :
+
+border: 30px solid transparent;
+font-size: 40px;
+background-color: rgb(150, 215, 255);
+border-image: url("./132d0b11f96dcffaa700966900312a52.jpg") 150 round;
+box-shadow: 10px 20px grey;
+--------------------------------
+
+https://www.alura.com.br/artigos/css-guia-do-flexbox
+===============================================================
+conf de espaçamento:
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+===============================================================
+
+gap : o tamanho dos espaços entre linhas e colunas em layouts de 
+        grid, 
+        flex 
+        multi-column
+
+
+elemento-referenciado:hover
+transition: 1s;  //determina o tempo de transição para aplicação dos estilos
 
 cascata porque ele vai fechado o estilo
 precisa de link entre o css e o html
@@ -57,7 +130,22 @@ box-sizing : content-box
 
 viewport : usar por questao de resposividade
 
+===========================================
+alinhamento de caixa e item
+-------------------------------------------
 flex-box: display: flex;
+        align-items: center; 
+        justify-content: space-between;
+--------------------------------------------
 
-
+===========================================
+Import fontes do google fonts
+É a ultilização  é usada 
+    com essas caracteristicas -> font-family: 'Montserrat', sans-serif;
+    LINK DE FONTES ->https://fonts.google.com/
+-------------------------------------------
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:ital@1&display=swap');
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+--------------------------------------------
 */
