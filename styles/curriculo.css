@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Open+Sans:ital@1&display=swap');
+
+.curriculo{
+    color: white;
+    display: flex;
+    padding: 3% 15% 5% 15%;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* border: 2px solid white; */
+    
+}
+.curriculo__img{
+    border-radius: 50px;
+    border: 1px solid whitesmoke;
+}
+.curriculo__link{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+}
+.curriculo__link__grupo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:10px;
+}
+
+.curriculo__link__lista{
+    padding-left: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+}
+.curriculo__link__paragrafo{
+    border: 2px solid whitesmoke; 
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600px; 
+    font-size: 21px;
+}

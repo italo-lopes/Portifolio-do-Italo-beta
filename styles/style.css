@@ -4,30 +4,51 @@
     margin: 0px;
     padding: 0px;
 }
-
 body{
-    height: 100vh;
-    box-sizing: border-box;
+    /* height: 100vh; define o tamanho inteiro da viwport */
+    box-sizing: border-box; /* No conteudo onde não quero pra ultrapassar a borda, colocar no filho da borda o seu pai é html, n ultrapassa  o html  */
     background-color:black;
     color: whitesmoke;
 } 
-
+/*
+ box-sizing: border-box -> layouts responsivos
+ pois temos a garantia que os elementos terão o exato tamanho que definimos,
+*/
 strong{
     color: bisque;
 }  
-
-.container{
-  
-    margin: 10% 15% 0% 15%;
+.cabecalho__menu{
     display: flex;
-    /* Por padrao fica as div em coluna (row)*/
-    align-items: center; 
-    /* alinhamento vertical */
-    justify-content: space-around;
-    gap: 5px;
-      /* ele coloca espaçamento entre os item alinhamento horizontal*/
+    background-color:black;
+    color: blue;
+    padding: 5% 0% 2% 19%;
+    gap: 80px;
+    box-sizing: border-box;
+    /* align-items: flex-start; */    
+}
+.cabecalho__menu__link{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    /* border-radius: 8px; */
+    /* border : 1px solid white; */    
 }
 
+.cabecalho__menu__link__aqui{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    /* border-radius: 8px; */
+    /* border : 1px solid white; */    
+}
+.container{
+    /* margin: 10% 15% 0% 15%; */
+    padding: 8% 15% 0% 15%;
+    display: flex; /* Por padrao fica as div em coluna (row)*/
+    justify-content: space-around;
+    align-items: flex-start; /* alinhamento vertical */
+    gap: 5px; /* ele coloca espaçamento entre os item alinhamento horizontal*/
+}
 .container__conteudo{
     width: 50%;
     display: flex;
@@ -42,29 +63,61 @@ strong{
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
 }
-
+.container__links__subtitulo{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600px; 
+    font-size: 20px;
+    
+}
 .container__conteudo__links{
     margin: 0% 0% 0% 0%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
+    flex-direction: column;
+    align-items: center;
+    gap: 32px
 }
-
 .container__link__ancora{
-    background-color: whitesmoke ;
-    width: 260px;
+   /* background-color: whitesmoke ; */
+    width: 300px;
     text-align: center; 
-    border-radius: 16px;
+    border-radius: 9px; 
+    border: 1px solid blueviolet; /* tamanho , tipo , cor*/
     font-size: 20px;
     padding: 21.5px 0px 21.5px 0px; 
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600px;
+    display: flex;
+    justify-content: center;
+    /* padding-left: 93px; */
+    align-items: center;
+    column-gap: 10px;
+}
+/* hover -> pseudo class onde modifica o estilo da tag ao passar com o cursor por ela */
+.container__link__ancora:hover{
+     background-color: blanchedalmond;
+     color: black;
+     padding-left: 22px;
+     padding-right: 22px;
+}
+.rodape{
+    background-color: blanchedalmond;
+    color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center; 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600px; 
+    font-size: 15px;
+    margin-top: 10%;
+    box-sizing: border-box;
 }
 /*
-
-
+saber posicionamento de acordo com as modificação que é realizada 
+===============================================================
+sempre deixar a ordem de css de acordo com Html
+===============================================================
 
 width: 280px  tamanho da tag:
 text-align: center-> alinha o texto na teg
@@ -105,8 +158,6 @@ gap : o tamanho dos espaços entre linhas e colunas em layouts de
         grid, 
         flex 
         multi-column
-
-
 elemento-referenciado:hover
 transition: 1s;  //determina o tempo de transição para aplicação dos estilos
 

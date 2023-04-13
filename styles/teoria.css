@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Open+Sans:ital@1&display=swap');
+
+.teoria__conteudo__link{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 45px;
+    row-gap: 32px;
+    padding: 16px;
+}
+.resumo__link__conteudo{
+    /* border: 1px solid white; */
+    padding: 16px;
+    margin-left: 18%;
+}

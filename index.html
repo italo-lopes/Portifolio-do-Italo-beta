@@ -4,40 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href ="style.css">
+    <link rel="stylesheet" href ="./styles/style.css">
     <title>Portifolio</title>
 </head>
 <body>
-    <header></header>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link__aqui" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="curriculo.html">Curriculo</a>
+            <a class="cabecalho__menu__link" href="resumo.html">Teorico</a>
+        </nav>
+    </header>
     <main class="container">  
         <selecton class="container__conteudo"> <!--container_conteudo(filhoo de container   ) -->
             <h1 class="container__conteudo__h1">Desenvolvedor em contrução! <strong>Quase completo porem nunca finalizado.</strong> </h1>
-            
             <p class="container__conteudo__p"> Ola!. <strong>Sou Italo de Assis Silva Lopes</strong> um desenvovedor Back-End com conhecimento em kotlin, spring boot e banco de dados sempre em busca de descobrir novas ferramentas, e com uma curiosidade na parte de Front-End </p>
-            
             <div class="container__conteudo__links">
-                <a class="container__link__ancora" href = "https://www.instagram.com/italo_lopes_v2/">Instagram</a>
-                <a class="container__link__ancora" href ="https://github.com/italo-lopes">GitHub</a>
+                <h2 class="container__links__subtitulo">Acesse minhas redes sociais:</h2>
+                <a class="container__link__ancora" href ="https://github.com/italo-lopes">
+                    <img src = "assets/github.png" alt="incone do github"> GitHub
+                </a>
+                <a class="container__link__ancora" href ="https://twitter.com/ItalodeAssisSi2">
+                    <img src = "assets/twitter.png" alt="incone do twitter"> Twitter
+                </a>
+                <a class="container__link__ancora" href = "https://www.instagram.com/italo_lopes_v2/">
+                    <img src = "assets/instagram.png" alt="incone do instagram"> Instagram
+                </a>
             </div>
         </selecton>
-        <img src="KAKASHI.jpeg" width="25%" height="25%" alt="imagem de Portifolio">
+        <img src="assets/KAKASHI.jpeg" width="25%" height="25%" alt="imagem de Portifolio">
     </main>
-    <footer></footer>   
+    <footer class="rodape">
+        <p>Desenvolvido por Italo</p>
+    </footer>   
 </body> 
 </html>
 
 <!-- 
-      alt: Quando a img não for encontrada mostra um texto alternativo e com acessabilidade 
+    alt: Quando a img não for encontrada mostra um texto alternativo e com acessabilidade 
       header: parte de cima 
       footer : rodape
       main: conteudo 
 
-      main ->pai , selection ->filho de (main)  e pai de (h1,p,a) 
+    main ->pai , selection ->filho de (main)  e pai de (h1,p,a) 
       container(pai) 
       container_conteudo(filhoo de container   ) 
       o pai organiza apenas o filho 
 
-      selection -> parte de um conteudo de texto (especifico (topico))
+    selection -> parte de um conteudo de texto (especifico (topico))
       
       FONTES NO HTML : 
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
