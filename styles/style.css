@@ -4,37 +4,45 @@
     margin: 0px;
     padding: 0px;
 }
+:root{
+    --cor-primaria : #1a1515;
+    --cor-black: #0c071338; 
+    --font-primaira : 'Montserrat', sans-serif;
+    --font-segundaria : 'Open Sans', sans-serif;
+}
 body{
     /* height: 100vh; define o tamanho inteiro da viwport */
     box-sizing: border-box; /* No conteudo onde não quero pra ultrapassar a borda, colocar no filho da borda o seu pai é html, n ultrapassa  o html  */
-    background-color:black;
-    color: whitesmoke;
+    background-color: var(--cor-black);
+    color: var(--cor-primaria)
 } 
 /*
+Utilizando variaveis globais em css com :root aplicando em toda pagina html ou apenas em um elemento(tag)
+--ex-nome: e var <pra chamar ela>
  box-sizing: border-box -> layouts responsivos
  pois temos a garantia que os elementos terão o exato tamanho que definimos,
 */
 strong{
-    color: bisque;
+    color: hsla(123, 84%, 53%, 0.301);
 }  
 .cabecalho__menu{
     display: flex;
     background-color:black;
     color: blue;
     padding: 5% 0% 2% 19%;
-    gap: 80px;
+    gap: 5rem; 
     box-sizing: border-box;
     /* align-items: flex-start; */    
 }
+/* rem (relativo) - px (absoluto) 
 .cabecalho__menu__link{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-family: var(--font-primaira);
+    font-size: 1.12rem;
     /* border-radius: 8px; */
     /* border : 1px solid white; */    
 }
-
 .cabecalho__menu__link__aqui{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-primaira);
     font-size: 18px;
     color: white;
     text-decoration: none;
@@ -50,7 +58,7 @@ strong{
     gap: 5px; /* ele coloca espaçamento entre os item alinhamento horizontal*/
 }
 .container__conteudo{
-    width: 50%;
+    width: 50%; /*Quando é px não acompanha a tela*/
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -76,13 +84,18 @@ strong{
     align-items: center;
     gap: 32px
 }
-.container__link__ancora{
+
+.container__img{
+    width:  25%;
+    /* Acompanha o tamanho da imagem */
+}
+.container__link__navegacao{
    /* background-color: whitesmoke ; */
-    width: 300px;
+    width: 50%;
     text-align: center; 
     border-radius: 9px; 
     border: 1px solid blueviolet; /* tamanho , tipo , cor*/
-    font-size: 20px;
+    font-size: 1.25rem;
     padding: 21.5px 0px 21.5px 0px; 
     text-decoration: none;
     color: white;
@@ -92,10 +105,13 @@ strong{
     justify-content: center;
     /* padding-left: 93px; */
     align-items: center;
-    column-gap: 10px;
+    column-gap: 0.65rem;
+}
+.container__link__incone{
+    width: 10%;
 }
 /* hover -> pseudo class onde modifica o estilo da tag ao passar com o cursor por ela */
-.container__link__ancora:hover{
+.container__link__navegacao:hover{
      background-color: blanchedalmond;
      color: black;
      padding-left: 22px;
@@ -107,13 +123,44 @@ strong{
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: center; 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;  
     font-weight: 600px; 
     font-size: 15px;
     margin-top: 10%;
     box-sizing: border-box;
 }
+
+
+@media (max-width : 1200px ) {
+    /* bokdy{ 
+         background-color: blue; 
+     } */
+     .container{
+          /* display: flex; nao precisa dessa propriendade pq ja foi declaradaacima*/ 
+          flex-direction: column-reverse;
+          align-items: center;
+          
+     }
+
+    .container__conteudo{
+        width: auto; /*antes tava oucpando 50% do elemento pai agora quero pra ele ocupar todo espaço do elemento pai */
+        padding: 5%;
+    }
+
+}
+
+
+
 /*
+
+BOAS PRATICAS USAR VARIAVEIS  COM ROOT PRA CORES PRIMAIS O BACKGRAUND E FONTES
+================================================================
+Responsividade : %, rem ,@media ----- 
+================================================================
+Usando @media(max-width : numero px ) para reorganizar o sistema 
+==============================================================
+Importante CSS --->Importante usar variaveis relativas (1rem = 16px ,% ) e usar variaveis css para cor e fonte 
+==============================================================
 saber posicionamento de acordo com as modificação que é realizada 
 ===============================================================
 sempre deixar a ordem de css de acordo com Html
@@ -136,16 +183,19 @@ config do botao :
 
 ===============================================================
 --------------------------------
+
 Extra :
 
 border: 30px solid transparent;
 font-size: 40px;
-background-color: rgb(150, 215, 255);
+background-color: rgb(150, 215, 255); = hexadecimal é o melhor
 border-image: url("./132d0b11f96dcffaa700966900312a52.jpg") 150 round;
 box-shadow: 10px 20px grey;
+
 --------------------------------
 
 https://www.alura.com.br/artigos/css-guia-do-flexbox
+
 ===============================================================
 conf de espaçamento:
     width: 50%;
